@@ -22,12 +22,12 @@ class ArticlesController < ApplicationController
 
     def create
         @article = Article.create(title: params[:article][:title], content: params[:article][:content])
-        redirect_to root_path
+        redirect_to articles_path
     end
 
     def destroy
         @article.destroy
-        redirect_to root_path
+        redirect_to articles_path
     end
 
     def find_article
